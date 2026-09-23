@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BHŪMI ATELIER | Timeless Fashion, Fine Jewellery & Horology</title>
+  <meta name="description" content="Discover BHŪMI ATELIER. Dual-tier collections spanning accessible everyday essentials to bespoke haute luxury in clothing, jewellery, footwear, and watches for men and women.">
+  
+  <!-- Google Fonts: Luxury Serif + Modern Clean Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons for polished UI -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container announcement-content">
+      <span><i class="fa-solid fa-sparkles"></i> Complimentary Express Delivery on Orders Over $150</span>
+      <span class="announcement-promo">Use code <strong>BHUMI10</strong> for 10% Off Your First Order</span>
+      <div class="currency-selector">
+        <label for="currency-select" class="sr-only">Currency</label>
+        <select id="currency-select" aria-label="Select Currency">
+          <option value="USD">USD ($)</option>
+          <option value="EUR">EUR (€)</option>
+          <option value="GBP">GBP (£)</option>
+          <option value="INR">INR (₹)</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <!-- Mobile Menu Hamburger -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
+        <i class="fa-solid fa-bars-staggered"></i>
+      </button>
+
+      <!-- Brand Logo -->
+      <a href="#hero" class="brand-logo">
+        <span class="logo-main">BHŪMI</span>
+        <span class="logo-sub">A T E L I E R</span>
+      </a>
+
+      <!-- Primary Navigation Links -->
+      <nav class="main-nav" id="main-nav">
+        <div class="mobile-nav-header">
+          <span class="logo-main">BHŪMI</span>
+          <button class="nav-close-btn" id="nav-close-btn" aria-label="Close menu">&times;</button>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#catalog" class="nav-link active" data-filter-category="all">All Creations</a></li>
+          <li><a href="#catalog" class="nav-link" data-filter-gender="women">Women</a></li>
+          <li><a href="#catalog" class="nav-link" data-filter-gender="men">Men</a></li>
+          <li><a href="#catalog" class="nav-link" data-filter-category="clothes">Clothes</a></li>
+          <li><a href="#catalog" class="nav-link" data-filter-category="jewellery">Jewellery</a></li>
+          <li><a href="#catalog" class="nav-link" data-filter-category="shoes">Shoes</a></li>
+          <li><a href="#catalog" class="nav-link" data-filter-category="watches">Watches</a></li>
+          <li><a href="#catalog" class="nav-link nav-highlight" data-filter-tier="prive"><i class="fa-solid fa-gem"></i> The Privé Suite</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions (Search, Wishlist, Cart) -->
+      <div class="header-actions">
+        <!-- Search Trigger / Quick Input -->
+        <div class="search-box">
+          <input type="text" id="catalog-search" placeholder="Search creations, watches, silk..." aria-label="Search products">
+          <button class="search-btn" aria-label="Submit search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+
+        <!-- Wishlist Icon -->
+        <button class="action-icon-btn" id="wishlist-btn" aria-label="Open Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="badge" id="wishlist-count">0</span>
+        </button>
+
+        <!-- Cart Bag Icon -->
+        <button class="action-icon-btn cart-btn" id="cart-btn" aria-label="Open Shopping Bag">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="badge" id="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-tagline">
+        <span class="pill-badge"><i class="fa-solid fa-crown"></i> Haute Elegance Meets Everyday Living</span>
+      </div>
+      <h1 class="hero-title">Grounded in Grace.<br>Crafted for Every Moment.</h1>
+      <p class="hero-description">
+        Inspired by the Sanskrit word for Earth, <strong>BHŪMI ATELIER</strong> weaves dual worlds together: effortless modern essentials accessible to all, and bespoke luxury masterworks for the discerning collector.
+      </p>
+      <div class="hero-cta-group">
+        <a href="#catalog" class="btn btn-primary" id="hero-btn-everyday">
+          <span>Shop Everyday Atelier</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="#catalog" class="btn btn-outline" id="hero-btn-prive">
+          <i class="fa-solid fa-gem"></i>
+          <span>Explore Privé Luxury</span>
+        </a>
+      </div>
+      
+      <!-- Quick Metric Highlights -->
+      <div class="hero-features-bar">
+        <div class="hero-feat-item">
+          <i class="fa-solid fa-shield-halved"></i>
+          <div>
+            <strong>100% Certified</strong>
+            <span>Ethical Gold & Gems</span>
+          </div>
+        </div>
+        <div class="hero-feat-item">
+          <i class="fa-solid fa-leaf"></i>
+          <div>
+            <strong>Sustainable Fibres</strong>
+            <span>Linen, Cashmere & Silks</span>
+          </div>
+        </div>
+        <div class="hero-feat-item">
+          <i class="fa-solid fa-arrows-rotate"></i>
+          <div>
+            <strong>Easy Returns</strong>
+            <span>30-Day Guarantee</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dual-Tier Experience Spotlight (Normal & Rich) -->
+  <section class="dual-tier-section" id="dual-tier">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="sub-title">Two Worlds, One Signature Philosophy</span>
+        <h2 class="section-title">Designed for Everyday Comfort & Opulent Celebrations</h2>
+        <p class="section-lead">Whether seeking breathable organic cotton essentials under $100 or hand-finished 18K solid gold & Swiss automatic horology, find perfection curated for your lifestyle.</p>
+      </div>
+
+      <div class="dual-cards-grid">
+        <!-- Card 1: Everyday Atelier (Normal / Accessible) -->
+        <div class="tier-card card-everyday">
+          <div class="tier-badge-pill">The Everyday Atelier</div>
+          <div class="tier-card-image" style="background-image: url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80');"></div>
+          <div class="tier-card-body">
+            <span class="price-indicator">From $38 &bull; Accessible Luxury</span>
+            <h3>Everyday Essentials</h3>
+            <p>Tailored relaxed linen shirts, minimalist sterling silver jewelry, versatile leather sneakers, and sleek everyday quartz wristwear.</p>
+            <ul class="tier-perks">
+              <li><i class="fa-solid fa-check"></i> Breathable natural fibres</li>
+              <li><i class="fa-solid fa-check"></i> Everyday durable finishes</li>
+              <li><i class="fa-solid fa-check"></i> Exceptional price-to-quality ratio</li>
+            </ul>
+            <button class="btn btn-secondary filter-tier-btn" data-tier="everyday">
+              Shop Essentials ($35 - $150)
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 2: The Privé Suite (Rich / Luxury) -->
+        <div class="tier-card card-prive">
+          <div class="tier-badge-pill gold-pill"><i class="fa-solid fa-crown"></i> The Privé Suite</div>
+          <div class="tier-card-image" style="background-image: url('https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80');"></div>
+          <div class="tier-card-body">
+            <span class="price-indicator gold-text">From $450 &bull; Haute Horology & Couture</span>
+            <h3>The Privé Collection</h3>
+            <p>Hand-knotted mulberry silk, 18k solid gold & natural diamonds, hand-lasted Tuscan calfskin oxfords, and Swiss-crafted automatic chronographs.</p>
+            <ul class="tier-perks">
+              <li><i class="fa-solid fa-gem"></i> Certified conflict-free gemstones</li>
+              <li><i class="fa-solid fa-gem"></i> Numbered atelier limited editions</li>
+              <li><i class="fa-solid fa-gem"></i> Lifetime authenticity certificate</li>
+            </ul>
+            <button class="btn btn-gold filter-tier-btn" data-tier="prive">
+              Enter Privé Luxury ($450+)
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Category Spotlight Grid -->
+  <section class="categories-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="sub-title">Curated Universes</span>
+        <h2 class="section-title">Explore by Category</h2>
+      </div>
+
+      <div class="category-grid">
+        <!-- Clothes -->
+        <div class="category-card" data-cat="clothes">
+          <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=600&q=80" alt="Apparel Collection">
+          <div class="cat-content">
+            <span class="cat-count">Men & Women</span>
+            <h3>Clothes</h3>
+            <span class="cat-link">Discover Apparel <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </div>
+
+        <!-- Jewellery -->
+        <div class="category-card" data-cat="jewellery">
+          <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80" alt="Fine Jewellery">
+          <div class="cat-content">
+            <span class="cat-count">Silver & 18K Gold</span>
+            <h3>Jewellery</h3>
+            <span class="cat-link">Explore Adornments <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </div>
+
+        <!-- Shoes -->
+        <div class="category-card" data-cat="shoes">
+          <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=80" alt="Footwear Collection">
+          <div class="cat-content">
+            <span class="cat-count">Sneakers, Loafers & Heels</span>
+            <h3>Shoes</h3>
+            <span class="cat-link">Step in Style <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </div>
+
+        <!-- Watches -->
+        <div class="category-card" data-cat="watches">
+          <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=600&q=80" alt="Timepieces">
+          <div class="cat-content">
+            <span class="cat-count">Quartz & Automatics</span>
+            <h3>Watches</h3>
+            <span class="cat-link">View Timepieces <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Product Catalog Section -->
+  <section class="catalog-section" id="catalog">
+    <div class="container">
+      <div class="section-header catalog-header">
+        <div>
+          <span class="sub-title">The Complete Wardrobe</span>
+          <h2 class="section-title">Curated Catalog</h2>
+        </div>
+
+        <!-- Active Filter Indicator & Reset -->
+        <div class="active-filter-status" id="active-filter-status">
+          Showing: <span id="filter-display-label">All Creations</span>
+          <button id="reset-all-filters" class="btn-text-link">Reset Filters</button>
+        </div>
+      </div>
+
+      <!-- Controls & Filter Bar -->
+      <div class="controls-bar">
+        <!-- Gender Switcher Tabs -->
+        <div class="filter-tab-group" id="gender-tabs">
+          <button class="filter-tab active" data-gender="all">All</button>
+          <button class="filter-tab" data-gender="women"><i class="fa-solid fa-venus"></i> Women</button>
+          <button class="filter-tab" data-gender="men"><i class="fa-solid fa-mars"></i> Men</button>
+        </div>
+
+        <!-- Category Pills -->
+        <div class="category-pills-group" id="category-pills">
+          <button class="pill-btn active" data-category="all">All Categories</button>
+          <button class="pill-btn" data-category="clothes">Clothes</button>
+          <button class="pill-btn" data-category="jewellery">Jewellery</button>
+          <button class="pill-btn" data-category="shoes">Shoes</button>
+          <button class="pill-btn" data-category="watches">Watches</button>
+        </div>
+
+        <!-- Tier & Sort Selectors -->
+        <div class="filter-selects-group">
+          <!-- Price Tier Selector -->
+          <div class="select-wrapper">
+            <label for="tier-select" class="sr-only">Filter by Price Tier</label>
+            <select id="tier-select">
+              <option value="all">All Price Tiers</option>
+              <option value="everyday">Everyday ($35 - $150)</option>
+              <option value="signature">Signature Mid-Tier ($150 - $450)</option>
+              <option value="prive">Privé Haute Luxury ($450+)</option>
+            </select>
+          </div>
+
+          <!-- Sort Selector -->
+          <div class="select-wrapper">
+            <label for="sort-select" class="sr-only">Sort Products</label>
+            <select id="sort-select">
+              <option value="featured">Featured / Curated</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="rating">Top Rated</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Summary Bar -->
+      <div class="results-meta">
+        <span id="results-count">Showing 16 items</span>
+        <div class="tier-legend">
+          <span class="legend-item"><span class="legend-dot dot-everyday"></span> Everyday Essential</span>
+          <span class="legend-item"><span class="legend-dot dot-signature"></span> Signature</span>
+          <span class="legend-item"><span class="legend-dot dot-prive"></span> Privé Suite</span>
+        </div>
+      </div>
+
+      <!-- Product Grid Container -->
+      <div class="products-grid" id="products-grid">
+        <!-- Rendered dynamically by JavaScript -->
+      </div>
+
+      <!-- Empty State -->
+      <div class="empty-state hidden" id="empty-state">
+        <i class="fa-solid fa-compass-drafting"></i>
+        <h3>No matching creations found</h3>
+        <p>Try adjusting your search keywords or switching filters to explore other pieces.</p>
+        <button class="btn btn-primary" id="empty-reset-btn">View All Creations</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand Philosophy / Story Section -->
+  <section class="philosophy-section">
+    <div class="container philosophy-wrapper">
+      <div class="philosophy-text">
+        <span class="sub-title">The Maison Story</span>
+        <h2>The Spirit of BHŪMI</h2>
+        <p class="lead-quote">
+          "True luxury is not about gatekeeping elegance. It is about honoring the craft, cherishing the materials, and welcoming every soul who values beauty."
+        </p>
+        <p>
+          Founded on the principle of <em>Bhūmi</em> (the Sanskrit word for Earth and fundamental grounding), our atelier creates an effortless bridge between modern, accessible essentials and rare haute horology and fine jewellery.
+        </p>
+        <p>
+          Each garment uses non-toxic, ethically harvested linens and mulberry silks. Our jewellery uses 100% recycled precious metals and conflict-free lab and natural diamonds. Our watches are calibrated to exacting chronometric standards.
+        </p>
+        <div class="founder-signature">
+          <div class="sig-name">Bhumi &amp; The Design Collective</div>
+          <div class="sig-title">Founders &amp; Creative Directors</div>
+        </div>
+      </div>
+      <div class="philosophy-image">
+        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80" alt="Atelier Craftsmanship">
+        <div class="floating-badge">
+          <i class="fa-solid fa-certificate"></i>
+          <span>Artisanal Excellence Since Day One</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Verified Customer Testimonials (Dual Perspectives) -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="sub-title">Voices of Our Patrons</span>
+        <h2 class="section-title">Loved Across Every Lifestyle</h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="quote">"I bought the relaxed linen shirt and the sterling silver band. The quality rivals brands charging 4x the price! BHŪMI makes you feel impeccably dressed without breaking your monthly budget."</p>
+          <div class="client-meta">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Aria M.">
+            <div>
+              <strong>Aria Montgomery</strong>
+              <span>Everyday Atelier Patron &bull; New York</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card featured-testimonial">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="quote">"The Privé Skeleton Automatic Chronograph and the 18K Solstice Cuff exceeded every expectation. The weight, balance, and finishing match the finest Swiss houses in Geneva. Extraordinary distinction."</p>
+          <div class="client-meta">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Vikram S.">
+            <div>
+              <strong>Vikram Singhania</strong>
+              <span>Privé Suite Collector &bull; London</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="quote">"Finding a brand that caters to both chic weekend streetwear and high-end evening galas is rare. The Tuscany leather loafers fit like a glove right out of the box."</p>
+          <div class="client-meta">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="Marcus Chen">
+            <div>
+              <strong>Marcus Chen</strong>
+              <span>Footwear Connoisseur &bull; Singapore</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Signup with VIP Perk -->
+  <section class="newsletter-section">
+    <div class="container newsletter-box">
+      <div class="newsletter-content">
+        <span class="sub-title gold-text">Privileged Access</span>
+        <h2>Join The BHŪMI Circle</h2>
+        <p>Subscribe to receive preview access to limited Privé drops, seasonal lookbooks, and an instant <strong>10% courtesy welcome gift</strong>.</p>
+        <form id="newsletter-form" class="newsletter-form">
+          <input type="email" id="newsletter-email" placeholder="Enter your email address" required aria-label="Email address">
+          <button type="submit" class="btn btn-gold">Join The Circle</button>
+        </form>
+        <small class="privacy-note"><i class="fa-solid fa-lock"></i> We respect your privacy. Unsubscribe anytime with one click.</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col brand-col">
+        <a href="#hero" class="brand-logo">
+          <span class="logo-main">BHŪMI</span>
+          <span class="logo-sub">A T E L I E R</span>
+        </a>
+        <p>Grounded in timeless elegance. Curating democratic essentials and bespoke haute luxuries across Clothes, Jewellery, Shoes, and Watches.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Creations</h4>
+        <ul>
+          <li><a href="#catalog" class="footer-cat-link" data-cat="clothes">Clothes &amp; Apparel</a></li>
+          <li><a href="#catalog" class="footer-cat-link" data-cat="jewellery">Fine &amp; Demi-Fine Jewellery</a></li>
+          <li><a href="#catalog" class="footer-cat-link" data-cat="shoes">Handcrafted Footwear</a></li>
+          <li><a href="#catalog" class="footer-cat-link" data-cat="watches">Horology &amp; Watches</a></li>
+          <li><a href="#catalog" class="footer-tier-link" data-tier="prive">The Privé Suite</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Client Care</h4>
+        <ul>
+          <li><a href="#">Order Tracking &amp; Status</a></li>
+          <li><a href="#">Complimentary Shipping &amp; Returns</a></li>
+          <li><a href="#">Ring &amp; Footwear Sizing Guide</a></li>
+          <li><a href="#">Jewellery Care &amp; Polishing</a></li>
+          <li><a href="#">Atelier Concierge 24/7</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Sustainability &amp; Trust</h4>
+        <ul>
+          <li><a href="#">Ethical Gold &amp; Diamond Guarantee</a></li>
+          <li><a href="#">Organic Natural Textiles</a></li>
+          <li><a href="#">Handmade Artisan Network</a></li>
+          <li><a href="#">Terms &amp; Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; <span id="current-year">2026</span> BHŪMI ATELIER. All Rights Reserved. Crafted with intentional elegance.</p>
+      <div class="payment-badges">
+        <i class="fa-brands fa-cc-visa"></i>
+        <i class="fa-brands fa-cc-mastercard"></i>
+        <i class="fa-brands fa-cc-amex"></i>
+        <i class="fa-brands fa-apple-pay"></i>
+        <i class="fa-brands fa-google-pay"></i>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-Out Shopping Bag / Cart Drawer -->
+  <div class="drawer-backdrop" id="cart-drawer-backdrop"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-labelledby="cart-drawer-title" aria-modal="true" role="dialog">
+    <div class="drawer-header">
+      <div class="drawer-title-group">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <h3 id="cart-drawer-title">Shopping Bag (<span id="cart-drawer-count">0</span>)</h3>
+      </div>
+      <button class="drawer-close-btn" id="cart-drawer-close" aria-label="Close cart">&times;</button>
+    </div>
+
+    <!-- Free Shipping Indicator -->
+    <div class="shipping-meter-box">
+      <div class="shipping-meter-text" id="shipping-meter-text">
+        Add $150.00 more for <strong>Complimentary Express Shipping</strong>
+      </div>
+      <div class="meter-bar">
+        <div class="meter-fill" id="shipping-meter-fill" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- Cart Items Scroll List -->
+    <div class="cart-items-list" id="cart-items-list">
+      <!-- Injected dynamically -->
+    </div>
+
+    <!-- Cart Footer with Totals & Checkout -->
+    <div class="cart-footer" id="cart-footer">
+      <!-- Promo code coupon -->
+      <div class="promo-box">
+        <input type="text" id="promo-input" placeholder="Promo code (e.g. BHUMI10)" aria-label="Promo Code">
+        <button id="apply-promo-btn">Apply</button>
+      </div>
+      <div class="promo-feedback" id="promo-feedback"></div>
+
+      <!-- Financial calculations -->
+      <div class="cart-calc-row">
+        <span>Subtotal</span>
+        <span id="cart-subtotal">$0.00</span>
+      </div>
+      <div class="cart-calc-row discount-row hidden" id="discount-calc-row">
+        <span>Privilege Discount (10%)</span>
+        <span id="cart-discount">-$0.00</span>
+      </div>
+      <div class="cart-calc-row">
+        <span>Estimated Delivery</span>
+        <span id="cart-shipping">Calculated at checkout</span>
+      </div>
+      <div class="cart-calc-row total-row">
+        <span>Estimated Total</span>
+        <span id="cart-total">$0.00</span>
+      </div>
+
+      <button class="btn btn-primary btn-block" id="checkout-trigger-btn">
+        <span>Proceed to Secure Checkout</span>
+        <i class="fa-solid fa-lock"></i>
+      </button>
+
+      <button class="btn-clear-cart" id="clear-cart-btn">Clear Bag</button>
+    </div>
+  </aside>
+
+  <!-- Slide-Out Wishlist Drawer -->
+  <div class="drawer-backdrop" id="wishlist-drawer-backdrop"></div>
+  <aside class="cart-drawer wishlist-drawer" id="wishlist-drawer" aria-labelledby="wishlist-drawer-title" aria-modal="true" role="dialog">
+    <div class="drawer-header">
+      <div class="drawer-title-group">
+        <i class="fa-solid fa-heart"></i>
+        <h3 id="wishlist-drawer-title">My Wishlist (<span id="wishlist-drawer-count">0</span>)</h3>
+      </div>
+      <button class="drawer-close-btn" id="wishlist-drawer-close" aria-label="Close wishlist">&times;</button>
+    </div>
+
+    <div class="cart-items-list" id="wishlist-items-list">
+      <!-- Injected dynamically -->
+    </div>
+
+    <div class="cart-footer" id="wishlist-footer">
+      <button class="btn btn-primary btn-block" id="move-all-to-cart-btn">
+        Move All Available to Bag
+      </button>
+    </div>
+  </aside>
+
+  <!-- Quick View Modal -->
+  <div class="modal-backdrop" id="quick-view-backdrop"></div>
+  <div class="modal-window" id="quick-view-modal" role="dialog" aria-modal="true" aria-labelledby="modal-product-title">
+    <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">&times;</button>
+    <div class="modal-body" id="modal-body-content">
+      <!-- Dynamic Quick View Content -->
+    </div>
+  </div>
+
+  <!-- Checkout Simulator Modal -->
+  <div class="modal-backdrop" id="checkout-backdrop"></div>
+  <div class="modal-window checkout-modal" id="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkout-modal-title">
+    <button class="modal-close-btn" id="checkout-close-btn" aria-label="Close checkout">&times;</button>
+    <div class="checkout-modal-content" id="checkout-step-container">
+      <!-- Dynamic Checkout Content rendered via JS -->
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- JavaScript Application Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
